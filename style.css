@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #2c3e50;
+    --cor-secundaria: #aac7d3;
+    --cor-destaque: #e74c3c;
+    --cor-texto: #333;
+    --fundo-claro: #f9f9f9;
+    --branco: #ffffff;
+    --transicao: all 0.3s ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--fundo-claro);
+    line-height: 1.6;
+}
+
+/* Topo */
+.topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--branco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.container-topo {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    transition: var(--transicao);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav {
+    display: flex;
+}
+
+.lista-nav {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.link-nav {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: var(--transicao);
+}
+
+.link-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transition: var(--transicao);
+}
+
+.link-nav:hover {
+    color: var(--cor-destaque);
+}
+
+.link-nav:hover::after {
+    width: 100%;
+}
+
+/* Conteúdo Principal */
+.conteudo {
+    margin-top: 100px;
+    padding: 40px 0;
+}
+
+.secao-principal {
+    width: 100%;
+    padding: 40px 0;
+    background-image: radial-gradient(var(--cor-secundaria), var(--branco));
+}
+
+.carrossel {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.item {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px;
+    background-color: var(--branco);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: aparecer 0.5s ease-in-out;
+}
+
+.item.ativo {
+    display: flex;
+}
+
+@keyframes aparecer {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.box-imagem {
+    flex: 1;
+}
+
+.imagem-personagem {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transicao);
+}
+
+.imagem-personagem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.box-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.destaque {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: var(--branco);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.titulo-filme {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.descricao {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.link-botao {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.botao-assistir {
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transicao);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.botao-assistir:hover {
+    background-color: var(--cor-destaque);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Controles do Carrossel */
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.botao-controle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: var(--transicao);
+}
+
+.icone-seta {
+    width: 30px;
+    height: 30px;
+    transition: var(--transicao);
+}
+
+.botao-controle:hover .icone-seta {
+    transform: scale(1.2);
+}
+
+.avancar .icone-seta {
+    transform: rotate(180deg);
+}
+
+.avancar:hover .icone-seta {
+    transform: rotate(180deg) scale(1.2);
+}
+
+.marcadores {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contador {
+    font-weight: 700;
+    color: var(--cor-primaria);
+    font-size: 1.2rem;
+}
+
+.lista-marcadores {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.marcador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.marcador.ativo {
+    background-color: var(--cor-destaque);
+    transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .item {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .box-info {
+        text-align: center;
+    }
+    
+    .lista-nav {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-topo {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .lista-nav {
+        gap: 15px;
+    }
+    
+    .titulo-filme {
+        font-size: 2rem;
+    }
+}
+
+/* Ajuste para a imagem do Totoro */
+.item:nth-child(2) .imagem-personagem {
+    max-width: 200px;
+}

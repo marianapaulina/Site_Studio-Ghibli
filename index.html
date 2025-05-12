@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Studio Ghibli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="topo">
+        <div class="container-topo">
+            <img src="img/logo.png" alt="Studio Ghibli" class="logo">
+            <nav class="nav">
+                <ul class="lista-nav">
+                    <li><a href="#" class="link-nav">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <section class="secao-principal">
+            <div class="carrossel">
+                <!-- Item 1 - Chihiro -->
+                <div class="item ativo">
+                    <div class="conteudo-item">
+                        <div class="box-imagem">
+                            <img src="./img/1.png" alt="Chihiro e Haku" class="imagem-personagem">
+                        </div>
+                        <div class="box-info">
+                            <span class="destaque">Chihiro e Haku</span>
+                            <h2 class="titulo-filme">A Viagem de Chihiro</h2>
+                            <p class="descricao">
+                                Chihiro, uma menina de 10 anos, se aventura em um mundo de espíritos onde trabalha em uma casa de banhos para libertar seus pais e o misterioso Haku.
+                            </p>
+                            <a href="https://www.netflix.com" target="_blank" class="link-botao">
+                                <button class="botao-assistir">Assistir</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 - Totoro -->
+                <div class="item">
+                    <div class="conteudo-item">
+                        <div class="box-imagem">
+                            <img src="./img/2.png" alt="Totoro" class="imagem-personagem">
+                        </div>
+                        <div class="box-info">
+                            <span class="destaque">Totoro</span>
+                            <h2 class="titulo-filme">Meu Amigo Totoro</h2>
+                            <p class="descricao">
+                                Duas irmãs se mudam para o campo e descobrem criaturas mágicas na floresta, incluindo o adorável Totoro, um espírito guardião.
+                            </p>
+                            <a href="https://www.netflix.com" target="_blank" class="link-botao">
+                                <button class="botao-assistir">Assistir</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 - Kiki -->
+                <div class="item">
+                    <div class="conteudo-item">
+                        <div class="box-imagem">
+                            <img src="./img/3.png" alt="Kiki" class="imagem-personagem">
+                        </div>
+                        <div class="box-info">
+                            <span class="destaque">Kiki</span>
+                            <h2 class="titulo-filme">O Serviço de Entregas da Kiki</h2>
+                            <p class="descricao">
+                                Kiki, uma jovem bruxa de 13 anos, parte para um ano de treinamento com seu gato Jiji, estabelecendo um serviço de entregas aéreas.
+                            </p>
+                            <a href="https://www.netflix.com" target="_blank" class="link-botao">
+                                <button class="botao-assistir">Assistir</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 - Princesa Mononoke -->
+                <div class="item">
+                    <div class="conteudo-item">
+                        <div class="box-imagem">
+                            <img src="./img/4.png" alt="Princesa Mononoke" class="imagem-personagem">
+                        </div>
+                        <div class="box-info">
+                            <span class="destaque">San</span>
+                            <h2 class="titulo-filme">Princesa Mononoke</h2>
+                            <p class="descricao">
+                                Ashitaka, um príncipe amaldiçoado, se envolve na luta entre os deuses da floresta e os humanos que consomem seus recursos.
+                            </p>
+                            <a href="https://www.netflix.com" target="_blank" class="link-botao">
+                                <button class="botao-assistir">Assistir</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles -->
+                <div class="controles">
+                    <button class="botao-controle voltar">
+                        <img src="./img/seta.png" alt="Voltar" class="icone-seta">
+                    </button>
+                    <div class="marcadores">
+                        <span class="contador">01</span>
+                        <ul class="lista-marcadores">
+                            <li class="marcador ativo" data-index="0"></li>
+                            <li class="marcador" data-index="1"></li>
+                            <li class="marcador" data-index="2"></li>
+                            <li class="marcador" data-index="3"></li>
+                        </ul>
+                    </div>
+                    <button class="botao-controle avancar">
+                        <img src="./img/seta.png" alt="Avançar" class="icone-seta">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
